@@ -16,20 +16,21 @@ route.get('/', (req, res) => {
 })
 
 route.post('/', (req, res) => {
-    // const token = req.headers.authorization.split(" ")[1];
-    // console.log(token);
-    // jwt.verify(token, key, (err,payload) => {
-    //     if(err){
-    //         res.status(400).send("Invalid");
+    // // const token = req.headers.authorization.split(" ")[1];
+    // // console.log(token);
+    // // jwt.verify(token, key, (err,payload) => {
+    // //     if(err){
+    // //         res.status(400).send("Invalid");
 
-    //     }else{
-    //         res.send(payload);
-    //     }
-    //     //console.log("error", err);
-    //     //console.log("Payload", payload);
-    // })
+    // //     }else{
+    // //         res.send(payload);
+    // //     }
+    // //     //console.log("error", err);
+    // //     //console.log("Payload", payload);
+    // // })
 
-    res.send("Create a Department");
+    // res.send("Create a Department");
+    controller.create(req,res);
 })
 
 route.put('/:id/update', (req, res) => {

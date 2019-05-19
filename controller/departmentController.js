@@ -28,6 +28,12 @@ class DepartmentController {
             throw err;
         })   
     }
+
+    create(req, res) {
+        department.createDepartment(req.body.name)
+        .then(data => {res.send("department created")})
+        .catch(data => {res.status(400).send("error")})
+    }
 }
 
 module.exports = DepartmentController;
